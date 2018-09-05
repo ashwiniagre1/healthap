@@ -6,6 +6,7 @@ export class Testmodel
 {
 	
 	private _id: string;
+	private _name: string;
 	
 	constructor() { 
 	}
@@ -15,6 +16,12 @@ export class Testmodel
 	}
 	get id() : string {
 		return this._id;
+	}
+	set name(value: string) {
+		this._name = value;
+	}
+	get name() : string {
+		return this._name;
 	}
 	
 }
