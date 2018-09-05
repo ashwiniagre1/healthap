@@ -1,0 +1,26 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        person Health Details
+    </amexio-header>
+    <amexio-body>
+        <amexio-text-input [field-label]="'First Name'" [(ngModel)]="persondetails.fname" name="persondetails.fname" [place-holder]="'Enter First Name'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-text-input [field-label]="'Last Name'" [(ngModel)]="persondetails.lname" name="persondetails.lname" [place-holder]="'Enter last Name'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+        </amexio-text-input>
+        <amexio-number-input [field-label]="'Age'" [(ngModel)]="persondetails.age" name="persondetails.age" [place-holder]="'Enter Age'" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+        </amexio-number-input>
+        <amexio-radio-group [field-label]="'Gender'" name="persondetails.gender" [data-reader]="'data'" [display-field]="'gender'" [value-field]="'genderId'" [data]="radiogroupData" [horizontal]="true">
+        </amexio-radio-group>
+        <amexio-number-input [field-label]="'Weight'" [(ngModel)]="persondetails.weight" name="persondetails.weight" [place-holder]="'Enter Weight in kg'" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+        </amexio-number-input>
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Cancel'" [icon]="'fa fa-times fa 2x'" [type]="'default'" [tooltip]="'cancel'" [size]="'default'" [form-bind]="'cancelBtn'">
+        </amexio-button>
+        <amexio-button [label]="'Save'" [icon]="'fa fa-save fa 2x'" [type]="'theme-backgroundcolor'" [tooltip]="'Save'" [size]="'default'" [form-bind]="'saveBtn'">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>
